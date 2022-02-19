@@ -7,7 +7,7 @@ const HomeImage = () => {
     return (
         <div className='container'>
             <img src={reitzImg} className='reitzImage'/>
-            <div class="textposition">Weldome to Campus Club Culture Connect (4C)!</div>
+            <div class="textposition">Welcome to Campus Club Culture Connect (4C)!</div>
         </div>
     )
 }
