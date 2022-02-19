@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+}
+
+.reitzImage {
+    background-size: 100%, cover;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+    height: 600px;
+    width: 1720px;
+    animation: animateImage 3s;
+    filter: brightness(50%);
+}
+
+.textposition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #ffffff
+}
+
+@keyframes animateImage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

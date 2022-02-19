@@ -5,9 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 var element = React.createElement('h1', { className: 'greeting' }, 'Campus Culture Clubs Connect (4C) TESTING');
-ReactDOM.render(element, document.getElementById('root'));
 
-ReactDOM.render(element,
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

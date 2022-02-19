@@ -1,0 +1,61 @@
+nav{
+    height: 60px;
+    border: 1px solid #1c1c1c;
+    background-color: #5140e9;
+
+}
+
+.div-header{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flexDirection: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-header-buttons {
+    display: flex;
+    flexDirection: row;
+    align-items: center;
+}
+
+.button {
+    background-color: #e09238;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.login-button {
+    background-color: #c08139;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.logo-pic {
+    border-radius: 50px;
+    width: 40px;
+    padding: 5px 0;
+}
+
+.def-user {
+    border-radius: 50px;
+    width: 40px;
+    padding: 5px 0;
+}
