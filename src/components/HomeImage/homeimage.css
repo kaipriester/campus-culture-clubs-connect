@@ -3,12 +3,13 @@
 }
 
 .reitzImage {
-    background-size: 100%, cover;
+    background-size: 100%, flex;
     background-position: center;
     position: relative;
-    object-fit: cover;
-    height: 600px;
-    width: 1720px;
+    object-fit: fill;
+    max-width: 100%;
+    width: 100%;
+    max-height: 600px;
     animation: animateImage 3s;
     filter: brightness(50%);
 }
