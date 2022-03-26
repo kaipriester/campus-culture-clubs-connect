@@ -32,11 +32,19 @@ const LoginForm = () => {
                 <div className='form-left'>
                     <div className='form-left-content'>
                         <h4 className='welcome'> Welcome </h4>
+                        {userInfo && (
+                            <div>
+                                <div className="user-info">
+                                    <p>Logged in as {userInfo && userInfo.userDetails}</p>
+                                    <p>through your {userInfo && userInfo.identityProvider} account</p>
+                                </div>
+                            </div>
+                        )}
                         <div className='button-format'>
                             {!userInfo &&
-                                providers.map((provider) => (   
+                                providers.map((provider) => (
                                     <a className='but' key={provider} href={`/.auth/login/${provider}?post_login_redirect_uri=${redirect}`}>
-                                    Login
+                                        Login
                                     </a>
                                 ))}
                             {userInfo && <a className='but' href={`/.auth/logout?post_logout_redirect_uri=${redirect}`}>Logout</a>}
