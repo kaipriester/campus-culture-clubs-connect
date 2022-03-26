@@ -1,0 +1,64 @@
+.page-back{
+    margin: auto;
+    margin-top: 200px;
+}
+
+.menu-list{
+    display: flex;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    animation: ease-in;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.logo{
+    height: 100%;
+    transition: 0.5s;
+}
+
+.logo:hover{
+    filter: brightness(80%);
+}
+
+.welcome{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40%;
+}
+
+.button-format{
+    text-align: center;
+    margin-top: 30%;
+}
+
+.form-left{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+
+.form-left-content{
+    height: 100%;
+}
+
+.but{    
+    width: 30%;
+    text-align: center;
+    background-color: #5140e9;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px;
+    animation: ease-in;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.but:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
