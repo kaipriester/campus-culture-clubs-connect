@@ -1,7 +1,28 @@
 {
     "navigationFallback": {
         "rewrite": "/index.html",
-        "exclude": ["*.{css,scss,js,jpg,gif,png,svg,ico}"]
+        "exclude": [
+            "*.{css,scss,js,jpg,gif,png,svg,ico}"
+        ]
+    },
+    "routes": [
+        {
+            "route": "/myclubs",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
+            "route": "/mycards",
+            "allowedRoles": [
+                "authenticated", "officer"
+            ]
+        }
+    ],
+    "responseOverrides": {
+        "401": {
+            "statusCode": 302,
+            "redirect": "/userlogin"
+        }
     }
-    
 }

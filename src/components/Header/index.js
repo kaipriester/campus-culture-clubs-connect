@@ -28,7 +28,7 @@ const Header = () => {
                             <img src={defUser} className='def-user' />
                         </div>
                         <div>
-                            <button className='login-button' onClick={() => { navigate("/userlogin") }}> Login </button>
+                            <button className='login-button' onClick={() => { navigate("/userlogin") }}> Account </button>
                         </div>
                     </div>
                 </div>
