@@ -7,13 +7,13 @@
     },
     "routes": [
         {
-            "route": "/myclubs",
+            "route": "/myclubs*",
             "allowedRoles": [
                 "authenticated"
             ]
         },
         {
-            "route": "/mycards",
+            "route": "/mycards*",
             "allowedRoles": [
                 "authenticated", "officer"
             ]
