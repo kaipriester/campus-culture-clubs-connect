@@ -12,15 +12,15 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 //Testing2
 
 
-function requireAuth(nextState, replace, next) {
-  if (!authenticated) {
-    replace({
-      pathname: "/userlogin",
-      state: {nextPathname: nextState.location.pathname}
-    });
-  }
-  next();
-}
+// function requireAuth(nextState, replace, next) {
+//   if (!authenticated) {
+//     replace({
+//       pathname: "/userlogin",
+//       state: {nextPathname: nextState.location.pathname}
+//     });
+//   }
+//   next();
+// }
 
 function App() {
   //const [auth] = useState;
@@ -29,8 +29,8 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/myclubs" element={<MyClubs/> } onEnter={requireAuth}/>
-        <Route path="/mycards" element={<MyCards/>} onEnter={requireAuth}/>
+        <Route path="/myclubs" element={<MyClubs/> }/>
+        <Route path="/mycards" element={<MyCards/>}/>
         <Route path="/userlogin" element={<UserLogin />} />
       </Routes>
     </Router>
