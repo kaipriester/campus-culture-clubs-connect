@@ -24,7 +24,6 @@ function requireAuth(nextState, replace, next) {
 
 function App() {
   //const [auth] = useState;
-  const [userInfo] = useState();
   return (
     <Router className="App">
       <Header/>
