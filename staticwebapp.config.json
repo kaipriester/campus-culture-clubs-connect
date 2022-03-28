@@ -1,24 +1,24 @@
 {
+    "routes": [
+        {
+            "route": "/myclubs/*",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
+            "route": "/mycards/*",
+            "allowedRoles": [
+                "authenticated", "officer"
+            ]
+        }
+    ],
     "navigationFallback": {
         "rewrite": "/index.html",
         "exclude": [
             "*.{css,scss,js,jpg,gif,png,svg,ico}"
         ]
     },
-    "routes": [
-        {
-            "route": "/myclubs*",
-            "allowedRoles": [
-                "authenticated"
-            ]
-        },
-        {
-            "route": "/mycards*",
-            "allowedRoles": [
-                "authenticated", "officer"
-            ]
-        }
-    ],
     "responseOverrides": {
         "401": {
             "statusCode": 302,
