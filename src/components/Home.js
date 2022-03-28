@@ -1,16 +1,14 @@
 import React from 'react';
 //Home Components
-import Header from './Header';
 import HomeImage from './HomeImage';
 import SearchBar from './SearchBar';
 import Spinner from './Spinner';
-import Card from './Card';
 import Grid from './Grid';
 
 //default image for clubs
 import DefaultClubImage from '../images/NoClubImage.png';
-import userEvent from '@testing-library/user-event';
 
+import { BrowserRouter } from 'react-router-dom';
 //This sections is a temporary spot for hard coded clubs
 
 /*
@@ -18,12 +16,8 @@ import userEvent from '@testing-library/user-event';
 */
 
 const Home = () => {
-
-
-
     return(
-        <div>
-            <Header/>
+        <div data-testid="Home-1">
             <HomeImage/>
             <SearchBar/>
             <Grid header='Clubs' DefaultClubImage={DefaultClubImage}/>
