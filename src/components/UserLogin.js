@@ -1,6 +1,5 @@
 import React from 'react';
 //Home Components
-import Header from './Header';
 import LoginForm from './LoginForm';
 
 /*
@@ -10,7 +9,6 @@ import LoginForm from './LoginForm';
 const UserLogin = () => {
     return(
         <div>
-            <Header />
             <LoginForm />
         </div>
     )
