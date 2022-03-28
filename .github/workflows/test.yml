@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
+
     - name: Run the tests
       run: npm test
