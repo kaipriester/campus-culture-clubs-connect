@@ -32,8 +32,12 @@ nav{
     border-radius: 8px;
 }
 
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .login-button {
-    background-color: #c08139;
+    background-color: #e09238;
     border: none;
     color: white;
     padding: 5px 15px;
@@ -44,6 +48,10 @@ nav{
     margin: 15px 20px;
     cursor: pointer;
     border-radius: 8px;
+}
+
+.login-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .logo-pic {
