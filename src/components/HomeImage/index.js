@@ -5,9 +5,10 @@ import reitzImg from '../../images/reitz-union.png';
 //Reitz union image on homepage
 const HomeImage = () => {
     return (
-        <div className='container'>
-            <img src={reitzImg} className='reitzImage'/>
-            <div class="textposition">Welcome to Campus Club Culture Connect (4C)!</div>
+        <div className='home-container'>
+            <div className='overlay'>
+                <div class="textposition">Welcome to Campus Club Culture Connect (4C)!</div>
+            </div>
         </div>
     )
 }

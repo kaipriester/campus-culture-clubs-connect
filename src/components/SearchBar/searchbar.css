@@ -5,11 +5,9 @@
     background: #5140e9;
     padding: 0 20px;
     border-radius: 100px;
-
 }
 .Content {
     position: relative;
-    max-width: var()(--maxWidth);
     width: 100%;
     height: 55px;
     background: var(--medGrey);

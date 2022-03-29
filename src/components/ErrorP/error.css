@@ -1,0 +1,11 @@
+.container {
+    text-align: center;
+    
+    min-height: 100vh;
+}
+
+.gatorImage {
+    margin-top: 250px;
+    width: 230px;
+    height: auto;
+}

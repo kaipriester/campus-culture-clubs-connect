@@ -1,3 +1,4 @@
+
 .card-container{
     width: 300px;
     max-width: 300px;
@@ -6,6 +7,7 @@
     transition: 0.3s;
     animation: ease-in;
     border-radius: 8px;
+    background-color: #5140e9;
 }
 
 .card-image img{
@@ -48,7 +50,7 @@ h3,p{
 .btn button{
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    background-color: #5140e9;
+    background-color: #ffa726;
     transition: 0.2s;
     border-radius: 8px;
     border: none;
