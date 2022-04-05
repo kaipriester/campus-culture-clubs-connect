@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './loginform.css';
 //components
+import {userContext} from './../../Contexts/userContext';
 import logo from '../../images/4.png';
 
 const LoginForm = () => {
     //list of providers from azure
     const providers = ['twitter'];
     const redirect = window.location.pathname;
-    const [userInfo, setUserInfo] = useState();
+    const {userInfo, setUserInfo} = useContext(userContext);
 
     //access the user login status by making a query to /.auth/me in the client
     useEffect(() => {
