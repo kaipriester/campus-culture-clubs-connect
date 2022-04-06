@@ -1,9 +1,9 @@
 import React from 'react';
 //Home Components
 import Grid from './Grid';
-
 import DefaultClubImage from '../images/NoClubImage.png';
-
+//hook for changing page
+import { useNavigate } from 'react-router-dom';
 /*
     This is the My Cards page of the application
 */
@@ -15,10 +15,15 @@ const Savedclubs = [
 ];
 
 const MyCards = () => {
+    let navigate = useNavigate();
     return(
         <div>
             <h1> My Cards </h1>
             <Grid Clubs={Savedclubs} DefaultClubImage={DefaultClubImage}/>
+            <div className='myCardsButtons'>
+                            <button className='button' onClick={() => { navigate("/createcard") }}> Create New Club Card </button>
+                            <button className = 'button'> Add Existing Club </button>         
+            </div>
         </div>
     )
 }
