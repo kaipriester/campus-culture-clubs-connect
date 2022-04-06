@@ -11,15 +11,6 @@ import ErrorPage from './components/ErrorPage.js';
 //Router
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {userContext} from './Contexts/userContext';
-// function requireAuth(nextState, replace, next) {
-//   if (!authenticated) {
-//     replace({
-//       pathname: "/userlogin",
-//       state: {nextPathname: nextState.location.pathname}
-//     });
-//   }
-//   next();
-// }
 
 function App() {
   //const [auth] = useState;

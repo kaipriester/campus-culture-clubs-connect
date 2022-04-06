@@ -22,7 +22,8 @@ const Header = () => {
                         <div className='header-buttons'>
                             <button className='button' onClick={() => { navigate("/") }}> Home </button>
                             <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") : navigate("/myclubs") }}> My Clubs </button>
-                            <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") :  navigate("/mycards") }}> My Cards </button>
+                            <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") :  navigate("/mycards") }}> Edit Club </button>
+                            <button className='button' onClick={() => {navigate("/about")}}> About </button>
                         </div>
                     </div>
                     <div style={{ display: 'flex', 'flexDirection': 'row' }}>
@@ -30,7 +31,7 @@ const Header = () => {
                             <img src={defUser} className='def-user' />
                         </div>
                         <div>
-                            <button className='login-button' onClick={() => { navigate("/userlogin") }}> Account </button>
+                            <button className='login-button' onClick={() => { navigate("/userlogin") }}> Login </button>
                         </div>
                     </div>
                 </div>

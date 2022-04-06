@@ -9,7 +9,7 @@
         {
             "route": "/mycards/*",
             "allowedRoles": [
-                "authenticated", "officer"
+                "officer"
             ]
         }
     ],
