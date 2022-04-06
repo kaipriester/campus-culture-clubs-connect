@@ -1,6 +1,8 @@
 import React from 'react';
 import './card.css';
 
+//TO-DO: ADD ALL FEATURES OF THE FORM
+//ADD A FAVORITE BUTTON
 const Card = ({image, title, desc, clickable, route}) => {
     return(
         <div className='card-container'>
