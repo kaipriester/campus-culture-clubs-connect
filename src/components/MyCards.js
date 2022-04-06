@@ -14,17 +14,20 @@ const Savedclubs = [
 
 ];
 
+
 const MyCards = () => {
     let navigate = useNavigate();
     return(
         <div>
-            <h1> My Cards </h1>
+            <h1> Fill out the form below to update your club </h1>
             <Grid Clubs={Savedclubs} DefaultClubImage={DefaultClubImage}/>
             <div className='myCardsButtons'>
                             <button className='button' onClick={() => { navigate("/createcard") }}> Create New Club Card </button>
                             <button className = 'button'> Add Existing Club </button>         
             </div>
+            
         </div>
+        //TO-DO: ADD FORM FOR CARD HERE
     )
 }
 
