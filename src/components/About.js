@@ -8,7 +8,7 @@ const About = () => {
         <div>
             <div className='page-bg'>
                 <div className= 'content-box'>
-                <img src={logo} className='logo' />
+                <img src={logo} alt="logo with branches surrounding text that says 4c campus connect" className='logo' />
                     
                     <div className='about-content'>
                         <h1>About</h1>
