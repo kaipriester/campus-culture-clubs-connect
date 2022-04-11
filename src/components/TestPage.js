@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import NoAccessPage from './NoAccessPage.js';
 import {userContext} from './../Contexts/userContext';
+import {Navigate} from 'react-router-dom';
 
 const TestPage = () => {
     const {userInfo} = useContext(userContext)
@@ -10,8 +11,6 @@ const TestPage = () => {
             <div> This is the Test page </div>
         )
     }
-    return (
-        <NoAccessPage/>
-    )
+    return <Navigate to='./noaccess'/>
 }
 export default TestPage;
