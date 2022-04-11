@@ -4,11 +4,11 @@ import './error.css';
 import GatorGif from './../../images/RetroPixelAlbert.gif';
 
 
-const ErrorP = () => {
+const ErrorP = ({text}) => {
     return(
         <div className="container">
             <img src={GatorGif} className='gatorImage'/>
-            <h1> Page Not Found </h1>
+            <h1> {text} </h1>
         </div>
     )
 }

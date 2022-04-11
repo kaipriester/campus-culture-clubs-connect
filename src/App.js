@@ -10,6 +10,7 @@ import CreateCard from './components/CreateCard.js';
 import UserLogin from './components/UserLogin.js';
 import About from './components/About.js';
 import ErrorPage from './components/ErrorPage.js';
+import NoAccessPage from './components/NoAccessPage.js';
 import TestPage from './components/TestPage.js';
 //Router
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/userlogin" element={<UserLogin />} />
           <Route path="/about" element={<About />} />
           <Route path="/testpage" element={<TestPage />} />
+          <Route path="/noaccess" element={<NoAccessPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

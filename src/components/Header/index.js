@@ -24,7 +24,7 @@ const Header = () => {
                             <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") : navigate("/myclubs") }}> My Clubs </button>
                             <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") :  navigate("/mycards") }}> Edit Club </button>
                             <button className='button' onClick={() => {navigate("/about")}}> About </button>
-                            <button className='button' onClick={() => {userInfo.userRoles.includes("tester") ? navigate("/testpage") : navigate("login")}}> Test </button>
+                            <button className='button' onClick={() => {navigate("/testpage")}}> Test </button>
                         </div>
                     </div>
                     <div style={{ display: 'flex', 'flexDirection': 'row' }}>
