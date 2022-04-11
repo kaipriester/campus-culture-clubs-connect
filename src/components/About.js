@@ -15,7 +15,7 @@ const About = () => {
                         <br />
                         <p>Hello UF Students!</p>
                         <br />
-                        <p>Welcome to Campus Club Culture Connect of 4C. This webapp is a central location to explore
+                        <p>Welcome to Campus Club Culture Connect or 4C. This webapp is a central location to explore
                         student culture clubs on the University of Florida (UF) campus. With the shift to online course work, it has become more difficult for students 
                         to make meaningful connections when moving to campus. Also, online environments have amplified cultural discrimination. 
                         Cultural clubs are a great way to nurture welcoming communities for all students. 4C is a way for students to 
