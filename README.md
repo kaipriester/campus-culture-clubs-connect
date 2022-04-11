@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Campus Club Culture Connect (4C)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](https://github.com/kaipriester/campus-culture-clubs-connect/blob/master/src/images/4.png?raw=true)
 
-## Available Scripts
+## Our Developers 
 
-In the project directory, you can run:
+Tam Huynh, Kai Priester, Xingyan Liang, and Brian Guida developed this webapp for the Univeristy of Florida (UF) Introduction to Software Engineering (CEN3031) final group project.
 
-### `npm start`
+## User Documention
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Hello UF Students!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Welcome to Campus Club Culture Connect of 4C. This webapp is a central location to explore student culture clubs on the University of Florida (UF) campus. With the shift to online course work, it has become more difficult for students to make meaningful connections when moving to campus. Also, online environments have amplified cultural discrimination. Cultural clubs are a great way to nurture welcoming communities for all students. 4C is a way for students to find clubs and show them how to get involved in an effective and safe way during the pandemic by utilizing online platforms (Slack, Discord, Groupme…).
 
-### `npm test`
+Vist https://lively-coast-0e7affc0f.1.azurestaticapps.net/about to learn more about our application and try it out!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Developer Documentation
 
-### `npm run build`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed/hosted using [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps for development set-up
+* We recomend using VScode for development (make sure you have git set up and it's easiest to run/commit from the terminal inside of VScode)
+* Set up Node.js https://nodejs.org/en/ (this is to run React)
+* Clone this repo https://github.com/kaipriester/campus-culture-clubs-connect.git
+* Open it in VScode 
+* If you have everything configured you should be able to cd into campus-culture-clubs-connect dir and run "npm start"
+the page it renders on your local host should look exactly like this web page https://lively-coast-0e7affc0f.1.azurestaticapps.net/
+* This is because every time a commit it made to main branch it will redeploy the application through github actions to Azure Static Web Apps hosting (if you are interested on how that works check this out https://blog.leitwolf.io/deploy-react-azure-static-web-app/)
+* If you wanna play around with this application, make changes on your own branch and submit a pull request if you would like your changes to be considered
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Please send any questions to 4cwebapp@gmail.com
