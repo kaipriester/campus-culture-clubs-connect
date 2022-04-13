@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - run: npm install
+    - run: |
+        cd client
+        npm install
     - name: react-test-scripts
       run: npm test
