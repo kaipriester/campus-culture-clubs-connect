@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - run: cd campus-culture-clubs-connect
+    - run: client
     - run: npm install
     - name: react-test-scripts
       run: npm test
