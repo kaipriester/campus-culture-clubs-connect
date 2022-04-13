@@ -2,12 +2,13 @@ import React from 'react';
 import ErrorP from './ErrorP';
 
 
-const ErrorPage = () => {
+const NoAccessPage = () => {
+    
     return(
         <div>
-            <ErrorP text='Error, Page Not Fonud' />
+            <ErrorP text='No Access' />
         </div>
     )
 }
 
-export default ErrorPage;
+export default NoAccessPage;

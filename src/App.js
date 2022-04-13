@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 //components
@@ -10,6 +9,7 @@ import CreateCard from './components/CreateCard.js';
 import UserLogin from './components/UserLogin.js';
 import About from './components/About.js';
 import ErrorPage from './components/ErrorPage.js';
+import NoAccessPage from './components/NoAccessPage.js';
 //Router
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {userContext} from './Contexts/userContext';
@@ -29,6 +29,7 @@ function App() {
           <Route path="/createcard" element={<CreateCard/>} />
           <Route path="/userlogin" element={<UserLogin />} />
           <Route path="/about" element={<About />} />
+          <Route path="/noaccess" element={<NoAccessPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

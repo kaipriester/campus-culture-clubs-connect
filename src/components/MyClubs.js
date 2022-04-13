@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext} from 'react';
 //Home Components
 import Grid from './Grid';
 
 import DefaultClubImage from '../images/NoClubImage.png';
+
+import {userContext} from './../Contexts/userContext';
+import {Navigate} from 'react-router-dom';
 
 //TO-DO: CHANGE THIS TO USER'S SAVED CLUBS
 const clubs = [
@@ -12,12 +15,18 @@ const clubs = [
 ];
 
 const MyClubs = () => {
+
+    const {userInfo} = useContext(userContext)
+
+    if (!userInfo) {
+        return <Navigate to='./../userlogin'/>
+    }
+
     return(
         <div>
             <h1 className='title'> My Favorite Club</h1>
             <Grid Clubs={clubs} DefaultClubImage={DefaultClubImage}/>
         </div>
-
     )
 }
 

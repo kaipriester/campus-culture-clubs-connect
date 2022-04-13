@@ -20,9 +20,9 @@ const Header = () => {
                             <img src={logo} className='logo-pic' />
                         </div>
                         <div className='header-buttons'>
-                            <button className='button' onClick={() => { navigate("/") }}> Home </button>
-                            <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") : navigate("/myclubs") }}> My Clubs </button>
-                            <button className='button' onClick={() => {!userInfo ? navigate("/userlogin") :  navigate("/mycards") }}> Edit Club </button>
+                            <button className='button' onClick={() => {navigate("/") }}> Home </button>
+                            <button className='button' onClick={() => {navigate("/myclubs") }}> My Clubs </button>
+                            <button className='button' onClick={() => {navigate("/mycards") }}> Edit Club </button>
                             <button className='button' onClick={() => {navigate("/about")}}> About </button>
                         </div>
                     </div>
