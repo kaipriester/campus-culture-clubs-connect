@@ -13,4 +13,6 @@ jobs:
         cd client
         npm install
     - name: react-test-scripts
-      run: npm test
+      run: |
+        cd client
+        npm test
