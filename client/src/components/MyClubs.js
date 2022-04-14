@@ -1,11 +1,15 @@
 import React, { useContext} from 'react';
 //Home Components
-import Grid from './Grid';
+import './myclubs.css';
 
 import DefaultClubImage from '../images/NoClubImage.png';
 
 import {userContext} from './../Contexts/userContext';
+import {clubContext} from './../Contexts/clubContext';
 import {Navigate} from 'react-router-dom';
+import Axios from 'axios';
+
+import Card from './Card';
 
 //TO-DO: CHANGE THIS TO USER'S SAVED CLUBS
 const clubs = [
@@ -17,15 +21,44 @@ const clubs = [
 const MyClubs = () => {
 
     const {userInfo} = useContext(userContext)
+    const {savedClubs} = useContext(clubContext)
+    const {setSavedClubs} = useContext(clubContext)
 
-    if (!userInfo) {
-        return <Navigate to='./../userlogin'/>
-    }
+    //if (!userInfo) {
+        //return <Navigate to='./../userlogin'/>
+    //}
+
+    const deleteClub = (id) => {
+        Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
+          setSavedClubs(savedClubs.filter((val)=> {
+            return val._id != id;
+          }))
+        })
+      }
+
+    //add different Grid implementation
 
     return(
         <div>
-            <h1 className='title'> My Favorite Club</h1>
-            <Grid Clubs={clubs} DefaultClubImage={DefaultClubImage}/>
+            <h1 className='title'> My Favorite Club:</h1>
+            <div className='container'>
+                <div className='content'> 
+                    {
+                        savedClubs ? 
+                        savedClubs.map((club) => 
+                        <div>
+                            <Card 
+                                image={DefaultClubImage} 
+                                title={club.title}
+                                desc={club.desc}
+                            />
+                            <button onClick={deleteClub(club._id)}>remove</button>
+                        </div>
+                        )
+                        : <h1>There are no saved clubs...</h1>
+                    }
+                </div>
+            </div>
         </div>
     )
 }

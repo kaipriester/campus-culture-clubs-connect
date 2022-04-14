@@ -1,8 +1,8 @@
-const express = reuire('express');
+const express = require('express');
 const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose');
-const UserModel = require('./models/Users')
+const ClubModel = require('./models/Club')
 
 app.use(express.json());
 app.use(cors());
@@ -11,15 +11,28 @@ app.use(cors());
 mongoose.connect("mongodb+srv://SWE:4CTKXB@4cdatabase.47pub.mongodb.net/SweApp?retryWrites=true&w=majority");
 //functionality
 app.get('/read', async (req, res) => {
-    UserModel.find({}, (result) => {
-        res.send(results)
+    ClubModel.find({}, (err,result) => {
+        if (err) {
+            res.json(error)
+        } else {
+            res.json(result) // sending back info 
+        }
     })
+    res.send("yay!")
 });
 
-app.put('/update', async (req, res) => {
-    const clubToRemove = req.body.clubToRemove;
-    const user = req.body.user;
-    //FILL
+app.post('/addclub', async (req,res) => {
+    const title = "penguin club";
+    const desc = "This is the penguin Club";
+
+    const club = new ClubModel({title: title, desc: desc});
+    await club.save();
+    res.send("yay!")
+})
+
+app.delete('/delete/:id', async (req,res) => {
+    const id = req.params.id;
+    await ClubModel.findByIdAndRemove(id).exec();
 })
 
 //Port listening
