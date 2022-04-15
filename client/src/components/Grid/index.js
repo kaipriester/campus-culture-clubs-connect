@@ -3,7 +3,7 @@ import './grid.css';
 import Card from '../../components/Card'
 
 //Grid used to render all the different cards
-const Grid = ({Clubs, header, content, DefaultClubImage}) => {
+const Grid = ({Clubs, header, DefaultClubImage}) => {
     return(
         <div className='container'>
             <h1 className='header'> {header}</h1>

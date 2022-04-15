@@ -16,6 +16,7 @@ const LoginForm = () => {
             setUserInfo(await getUserInfo());
         })();
     }, []);
+
     async function getUserInfo() {
         try {
             const response = await fetch('/.auth/me');
@@ -26,7 +27,8 @@ const LoginForm = () => {
             console.error('No profile could be found');
             return undefined;
         }
-    }
+    };
+    
     return (
         <div className='page-back'>
             <div className="menu-list auth">

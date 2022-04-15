@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home.js';  // Home Page
 import MyClubs from './components/MyClubs.js';
 import MyCards from './components/MyCards.js';
+import Card from './components/Card';
 import CreateCard from './components/CreateCard.js';
 import UserLogin from './components/UserLogin.js';
 import About from './components/About.js';
@@ -15,11 +16,14 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {userContext} from './Contexts/userContext';
 import {clubContext} from './Contexts/clubContext';
 import Axios from 'axios';
+import DefaultImage from './images/NoClubImage.png';
+
+
 
 function App() {
   //const [auth] = useState;
   const [userInfo, setUserInfo] = useState();
-  const [savedClubs, setSavedClubs] = useState();
+  const [savedClubs, setSavedClubs] = useState([]);
 
 
   //automatically get saved club data from database
@@ -32,7 +36,7 @@ function App() {
 
   return (
     <userContext.Provider value={{userInfo, setUserInfo}}>
-      <clubContext value={{savedClubs, setSavedClubs}}>
+      <clubContext.Provider value={{savedClubs, setSavedClubs}}>
         <Router className="App">
           <Header/>
           <Routes>
@@ -46,7 +50,7 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Router>
-      </clubContext>
+      </clubContext.Provider>
     </userContext.Provider>
   );
 }
