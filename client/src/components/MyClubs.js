@@ -41,24 +41,20 @@ const MyClubs = () => {
     return(
         <div>
             <h1 className='title'> My Favorite Club:</h1>
-            <div className='container'>
-                <div className='content'> 
+                <div className='myclub-content'> 
                     {
                         savedClubs ? 
                         savedClubs.map((club) => 
-                        <div>
-                            <Card 
-                                image={DefaultClubImage} 
-                                title={club.title}
-                                desc={club.desc}
-                            />
-                            <button onClick={deleteClub(club._id)}>remove</button>
-                        </div>
+                            <div classname="club-container">
+                                <div className="club-info">
+                                    <h1> {club.title} </h1>
+                                </div>
+                                <button className="rmv-btn" onClick={deleteClub(club._id)}>remove</button>
+                            </div>
                         )
                         : <h1>There are no saved clubs...</h1>
                     }
                 </div>
-            </div>
         </div>
     )
 }
