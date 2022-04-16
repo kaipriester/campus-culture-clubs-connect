@@ -7,14 +7,12 @@ import Axios from 'axios';
 //ADD A FAVORITE BUTTON
 const Card = ({image, title, desc, clickable, route}) => {
 
-    const {savedClubs} = useContext(clubContext);
-    const {setSavedClubs} = useContext(clubContext);
 
     //taking in params title and desc to add to the database
-    const addFriend = (ctitle, cdesc) => {
-        Axios.post('http://localhost:3001/addfriend', {
-        title: ctitle,
-        desc: cdesc
+    const addClub = (ctitle, cdesc) => {
+        Axios.post('http://localhost:3001/addclub', {
+        title: "Temp Title",
+        desc: 'Temporary Description"'
         })
     }
 
@@ -30,7 +28,7 @@ const Card = ({image, title, desc, clickable, route}) => {
                     <button>
                         <a> View More </a>
                     </button>
-                    <button className='left-btn' onClick={addFriend(title, desc)}>
+                    <button className='left-btn'>
                         <a> Add Club </a>
                     </button>
                 </div>
