@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 //TO-DO: ADD ALL FEATURES OF THE FORM
 //ADD A FAVORITE BUTTON
-const Card = ({image, title, desc, btnText}) => {
+const Card = ({image, title, desc}) => {
     //taking in params title and desc to add to the database
     return(
         <div className='card-container'>
