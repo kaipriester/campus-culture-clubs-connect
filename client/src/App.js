@@ -27,11 +27,13 @@ function App() {
 
 
   //automatically get saved club data from database
-  useEffect(() => {
-    Axios.get('http://localhost:3001/read', {}).then((response) => {
-      setSavedClubs(response.data)
-    }).catch('did not work');
-  }, [])
+
+  //UNCOMMENT TO USE DATABASE 
+  //useEffect(() => {
+    //Axios.get('http://localhost:3001/read', {}).then((response) => {
+      //setSavedClubs(response.data)
+    //}).catch('did not work');
+  //}, [])
 
 
   return (
