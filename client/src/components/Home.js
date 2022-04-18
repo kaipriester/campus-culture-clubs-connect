@@ -20,10 +20,10 @@ const clubs = [
     {'title': 'Swim Organization', 'desc': 'Description for Swim Org'},
     {'title': 'Tree Planting', 'desc': 'Description for Tree Planting'},
     {'title': 'Cooking Org', 'desc': 'Description for Cooking Org'},
-    {'title': 'Origami Org', 'desc': 'Description for Origami Club'},
+    {'title': 'Origami Org', 'desc': 'Description for Origami Org'},
     {'title': 'Acting Org', 'desc': 'Description for Acting Org'},
-    {'title': 'Bee Keeping', 'desc': 'Bee keepin desciption'},
-    {'title': 'Penguin Club', 'desc': 'Not a reference club'},
+    {'title': 'Bee Keeping', 'desc': 'Description for Bee Keeping Club'},
+    {'title': 'Penguin Club', 'desc': 'Description for Penguin Club'},
 ];
 
 

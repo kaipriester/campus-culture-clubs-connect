@@ -21,7 +21,7 @@ import DefaultImage from './images/NoClubImage.png';
 
 
 function App() {
-  //const [auth] = useState;
+  //use states
   const [userInfo, setUserInfo] = useState();
   const [savedClubs, setSavedClubs] = useState([]);
 

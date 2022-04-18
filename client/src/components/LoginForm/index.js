@@ -18,7 +18,7 @@ const LoginForm = () => {
     }, []);
 
     async function getUserInfo() {
-        try {
+        try { //tries to fetch user auth if not throws error
             const response = await fetch('/.auth/me');
             const payload = await response.json();
             const { clientPrincipal } = payload;
