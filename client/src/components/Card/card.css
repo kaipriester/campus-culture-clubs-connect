@@ -7,12 +7,13 @@
     transition: 0.3s;
     animation: ease-in;
     border-radius: 8px;
-    background-color: #5140e9;
+    background-color: white;
 }
 
 .card-image img{
     overflow: hidden;
     height: 200px;
+    filter: brightness(60%);
     
 }
 
@@ -64,6 +65,6 @@ h3,p{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.left-btn {
+.right-btn {
     margin-left: 40px;
 }

@@ -1,44 +1,53 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 //Home Components
 import HomeImage from './HomeImage';
 import SearchBar from './SearchBar';
 import Spinner from './Spinner';
 import Grid from './Grid';
-import Card from './Card';
 
 import './home.css';
 import Axios from 'axios';
 
 //default image for clubs
 import DefaultClubImage from '../images/NoClubImage.png';
+import {clubContext} from './../Contexts/clubContext';
 
 /*
     This is the Home page of the application
 */
 const clubs = [
-    {'title': 'club 1', 'desc': 'This is a description for club 1'},
-    {'title': 'club 2', 'desc': 'This is a description for club 2'},
-    {'title': 'club 3', 'desc': 'This is a description for club 3'},
-    {'title': 'club 4', 'desc': 'This is a description for club 4'},
-    {'title': 'club 5', 'desc': 'This is a description for club 5'},
-    {'title': 'club 6', 'desc': 'This is a description for club 6'},
-    {'title': 'club 7', 'desc': 'This is a description for club 7'},
-    {'title': 'club 8', 'desc': 'This is a description for club 8'},
-    {'title': 'club 9', 'desc': 'This is a description for club 9'},
+    {'title': 'SASE', 'desc': ' Description for SASE'},
+    {'title': 'Swim Organization', 'desc': 'Description for Swim Org'},
+    {'title': 'Tree Planting', 'desc': 'Description for Tree Planting'},
+    {'title': 'Cooking Org', 'desc': 'Description for Cooking Org'},
+    {'title': 'Origami Org', 'desc': 'Description for Origami Club'},
+    {'title': 'Acting Org', 'desc': 'Description for Acting Org'},
+    {'title': 'Bee Keeping', 'desc': 'Bee keepin desciption'},
+    {'title': 'Penguin Club', 'desc': 'Not a reference club'},
 ];
 
 
-const Home = () => {
+const Home = () => { 
     const [club, setClub] = useState("")
     const [desc, setDesc] = useState("")
 
+    const {savedClubs} = useContext(clubContext)
+    const {setSavedClubs} = useContext(clubContext)
+
+    //Change add button on click to this function for database functionality
     const addClub = () => {
         Axios.post('http://localhost:3001/addclub', {
         title: club,
         desc: desc
+        }).then(() => {
+            setSavedClubs([...savedClubs, {title: club, desc: desc}])
         })
     };
 
+    //Change on click function to this function for live demo
+    const liveAddClub = () => {
+        setSavedClubs([...savedClubs, {title: club, desc: desc}])
+    }
 
     return(
         <div data-testid="Home-1">
@@ -49,6 +58,7 @@ const Home = () => {
                 Header= {<h1> Clubs </h1>}
                 DefaultClubImage={DefaultClubImage}
             />
+            <h3 className='input-title'> Save Clubs Here </h3>
             <div className='input-container'>
                 <div className="inputs">
                     <input className="input-field" type="text" placeholder='Club Name...' onChange={(event) => {
@@ -57,7 +67,7 @@ const Home = () => {
                     <input className="input-field" type="text" placeholder='Club Description...' onChange={(event) => {
                         setDesc(event.target.value)
                     }}/>
-                    <button onClick={addClub}> Add Club To Saved List</button>
+                    <button onClick={liveAddClub}> Add Club To Saved List</button>
                 </div>
             </div>
         </div>
