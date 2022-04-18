@@ -3,11 +3,7 @@ import {clubContext} from './../../Contexts/clubContext';
 import './card.css';
 import Axios from 'axios';
 
-//TO-DO: ADD ALL FEATURES OF THE FORM
-//ADD A FAVORITE BUTTON
 const Card = ({image, title, desc, clickable, route}) => {
-
-
     //taking in params title and desc to add to the database
     const addClub = (ctitle, cdesc) => {
         Axios.post('http://localhost:3001/addclub', {
